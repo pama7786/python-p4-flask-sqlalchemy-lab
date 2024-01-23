@@ -10,7 +10,6 @@ from models import db, Zookeeper, Animal, Enclosure
 fake = Faker()
 
 with app.app_context():
-
     Animal.query.delete()
     Zookeeper.query.delete()
     Enclosure.query.delete()
@@ -47,4 +46,3 @@ with app.app_context():
 
     db.session.add_all(animals)
     db.session.commit()
-
